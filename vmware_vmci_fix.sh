@@ -10,7 +10,7 @@ fi
 rm -rf vmci-only
 tar xf vmci.tar
 pushd vmci-only
-patch -p1 < $PATCH_DIR/vmware9.k3.8rc4.patch
+patch -f -p1 < $PATCH_DIR/vmware9.k3.8rc4.patch
 popd
 tar cf vmci.tar vmci-only
 rm -rf vmci-only
