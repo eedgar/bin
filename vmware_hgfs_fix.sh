@@ -11,6 +11,8 @@ rm -rf vmhgfs-only
 tar xf vmhgfs.tar
 pushd vmhgfs-only/shared
 patch -p1 < $PATCH_DIR/vmware9.compat_mm.patch
+popd
+pushd vmhgfs-only
 patch -p1 < $PATCH_DIR/vmware9.k3.9.patch
 popd
 tar cf vmhgfs.tar vmhgfs-only
